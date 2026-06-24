@@ -1,0 +1,24 @@
+{
+  "name": "send_telegram",
+  "description": "Send a text message or document to a Telegram chat. Accepts a custom message, or sends the latest newsletter article if no message is provided.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "description": "Text message to send. If omitted, sends the latest newsletter article as a document."
+      },
+      "bot_token": {
+        "type": "string",
+        "description": "Telegram bot token. Falls back to TELEGRAM_BOT_TOKEN env var."
+      },
+      "chat_id": {
+        "type": "string",
+        "description": "Telegram chat ID. Falls back to TELEGRAM_CHAT_ID env var."
+      }
+    },
+    "required": []
+  },
+  "handler": "send_telegram.sh",
+  "env": ["TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"]
+}

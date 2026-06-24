@@ -1,0 +1,24 @@
+{
+  "name": "send_file_telegram",
+  "description": "Send a local file to a Telegram chat. Use when the user asks to upload or share a file via Telegram.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "string",
+        "description": "Full or home-relative path to the file. Example: /Users/name/Desktop/Files/report.pdf or ~/Desktop/Files/report.pdf"
+      },
+      "chat_id": {
+        "type": "string",
+        "description": "Telegram chat ID to send to. Falls back to TELEGRAM_CHAT_ID env var if not provided."
+      },
+      "caption": {
+        "type": "string",
+        "description": "Optional caption for the file."
+      }
+    },
+    "required": ["path"]
+  },
+  "handler": "send_file_telegram.sh",
+  "env": ["SENTRI_BOT_TOKEN", "TELEGRAM_CHAT_ID"]
+}

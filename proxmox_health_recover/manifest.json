@@ -1,0 +1,11 @@
+{
+  "name": "proxmox_health_recover",
+  "description": "Check Proxmox host health via HTTP and automatically trigger a reboot via SSH if the host is unresponsive. Includes a cooldown lock to prevent reboot storms.",
+  "parameters": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "handler": "proxmox_health_recover.sh",
+  "env": ["PROXMOX_HOST", "PROXMOX_HEALTH_URL", "PROXMOX_SSH_USER", "PROXMOX_SSH_HOST"]
+}

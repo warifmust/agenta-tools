@@ -1,0 +1,11 @@
+{
+  "name": "system_monitor",
+  "description": "Get a full system snapshot: CPU usage, memory usage, disk usage, uptime, top processes, and network status.",
+  "parameters": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "handler": "system_monitor.sh",
+  "env": []
+}

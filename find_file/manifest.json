@@ -1,0 +1,20 @@
+{
+  "name": "find_file",
+  "description": "Search for files by name pattern within a directory. Supports wildcards like *.pdf or report*. Returns full absolute paths.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "string",
+        "description": "Directory to search in. Can be absolute (/Users/name/Desktop) or relative to home (Desktop/Files). Defaults to home directory."
+      },
+      "pattern": {
+        "type": "string",
+        "description": "Filename pattern to search for. Example: *.pdf, report*, notes.txt. Use * for all files."
+      }
+    },
+    "required": ["pattern"]
+  },
+  "handler": "find_file.sh",
+  "env": []
+}

@@ -1,0 +1,24 @@
+{
+  "name": "tavily_search",
+  "description": "Search the web for information on a given topic. Returns titles, URLs, and summaries.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The search query."
+      },
+      "max_results": {
+        "type": "integer",
+        "description": "Number of results to return (1-10). Default: 5."
+      },
+      "search_depth": {
+        "type": "string",
+        "description": "Search depth: 'basic' (fast) or 'advanced' (deeper). Default: basic."
+      }
+    },
+    "required": ["query"]
+  },
+  "handler": "tavily_search.sh",
+  "env": ["TAVILY_API_KEY"]
+}

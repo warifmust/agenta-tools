@@ -1,0 +1,11 @@
+{
+  "name": "create_notion_page",
+  "description": "Create a Notion page from the latest newsletter article markdown file. Parses headings, paragraphs, and lists into Notion blocks and adds a random AI-themed cover image.",
+  "parameters": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "handler": "create_notion_page.sh",
+  "env": ["NOTION_TOKEN", "NOTION_PARENT_PAGE_ID"]
+}
