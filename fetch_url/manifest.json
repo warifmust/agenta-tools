@@ -1,0 +1,21 @@
+{
+  "name": "fetch_url",
+  "description": "Fetch the raw text/HTML content of a URL (GET request), truncated to a safe size.",
+  "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "The URL to fetch."
+      },
+      "max_chars": {
+        "type": "integer",
+        "default": 5000,
+        "description": "Max characters of body to return (default 5000)."
+      }
+    },
+    "required": ["url"]
+  },
+  "handler": "fetch_url.sh"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "calculator",
+  "description": "Evaluate a basic arithmetic expression (+, -, *, /, //, %, **) safely.",
+  "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "expression": {
+        "type": "string",
+        "description": "Arithmetic expression, e.g. '(3 + 4) * 2 / 7'."
+      }
+    },
+    "required": ["expression"]
+  },
+  "handler": "calculator.sh"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "current_datetime",
+  "description": "Get the current date and time, optionally in a given IANA timezone.",
+  "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "timezone": {
+        "type": "string",
+        "description": "IANA timezone name, e.g. 'America/New_York'. Defaults to UTC if omitted."
+      }
+    },
+    "required": []
+  },
+  "handler": "current_datetime.sh"
+}
