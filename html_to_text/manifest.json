@@ -1,0 +1,25 @@
+{
+  "description": "Fetch a URL and return readable plain text with HTML tags, scripts, and styles stripped and whitespace collapsed. Python stdlib only. Requires python3.",
+  "env": [],
+  "handler": "html_to_text.py",
+  "name": "html_to_text",
+  "parameters": {
+    "properties": {
+      "max_chars": {
+        "default": 5000,
+        "type": "integer"
+      },
+      "url": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "url"
+    ],
+    "type": "object"
+  },
+  "side_effect": "read_only",
+  "requires": [
+    "python3"
+  ]
+}

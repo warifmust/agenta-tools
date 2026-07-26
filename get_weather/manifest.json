@@ -1,0 +1,23 @@
+{
+  "description": "Get current weather (temperature, humidity, wind) for a city via Open-Meteo geocoding + forecast. No API key. Requires curl and jq.",
+  "env": [],
+  "handler": "get_weather.sh",
+  "name": "get_weather",
+  "parameters": {
+    "additionalProperties": false,
+    "properties": {
+      "city": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "city"
+    ],
+    "type": "object"
+  },
+  "side_effect": "read_only",
+  "requires": [
+    "curl",
+    "jq"
+  ]
+}
