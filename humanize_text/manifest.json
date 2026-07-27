@@ -1,0 +1,28 @@
+{
+  "description": "Rewrite an AI-generated article so it reads like a real person wrote it — model-backed, provider-agnostic, handles long multi-paragraph text via chunking.",
+  "env": [
+    "HUMANIZE_BASE_URL",
+    "HUMANIZE_MODEL",
+    "HUMANIZE_API_KEY"
+  ],
+  "handler": "humanize_text.py",
+  "name": "humanize_text",
+  "parameters": {
+    "additionalProperties": false,
+    "properties": {
+      "model": {
+        "description": "Optional model override. Defaults to HUMANIZE_MODEL env var or llama3.1:8b.",
+        "type": "string"
+      },
+      "text": {
+        "description": "The full article text to humanize (may be many paragraphs with markdown).",
+        "type": "string"
+      }
+    },
+    "required": [
+      "text"
+    ],
+    "type": "object"
+  },
+  "side_effect": "read_only"
+}
