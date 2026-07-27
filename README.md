@@ -33,6 +33,7 @@
 | `current_datetime` | Current date and time, optionally in a given IANA timezone. | — |
 | `find_file` | Search for files by name pattern (wildcards). Returns absolute paths. | — |
 | `system_monitor` | Full system snapshot: CPU, memory, disk, uptime, top processes, network. | — |
+| `humanize_text` ✦ | Rewrite AI-generated text so it reads like a person wrote it strips common [AI-writing tells](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) using any OpenAI-compatible model. Chunks long articles. | `HUMANIZE_BASE_URL`, `HUMANIZE_MODEL`, `HUMANIZE_API_KEY` |
 
 ### Messaging &amp; publishing
 | Tool | Description | Env |
